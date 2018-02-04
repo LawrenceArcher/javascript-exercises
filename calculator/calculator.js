@@ -1,25 +1,39 @@
-function add () {
-	
+function add (a, b) {
+	return a + b;
 }
 
-function subtract () {
-	
+function subtract (a, b) {
+	return a - b;
 }
 
-function sum () {
-	
+function sum (a) {
+	let result = 0;
+	for (var i = 0; i<a.length;i++){
+		result += a[i];
+	}
+	return result;
 }
 
-function multiply () {
-	
+function multiply (a) {
+	let result = 1;
+	for (var i = 0; i<a.length;i++){
+		result *= a[i];
+	}
+	return result;
 }
 
-function power() {
-	
+function power(a, b) {
+	return Math.pow(a, b);
 }
 
-function factorial() {
-	
+function factorial(a) {
+	if (a == 0){
+		return 1;
+	}
+	for (let i = a-1; i>0;i--){
+		a *= i;
+	}
+	return a;
 }
 
 module.exports = {
