@@ -1,13 +1,22 @@
-function echo() {
-	
+function echo(a) {
+	return a;
 }
 
-function shout() {
-	
+function shout(a) {
+	return a.toUpperCase();
 }
 
-function repeat() {
-
+function repeat(a, b) {
+	let answer = "";
+	for  (let i = 0; i<b;i++){
+		if (i == b-1){
+			answer += a;
+		}else{
+			answer += a + " ";	
+		}
+		
+	}
+	return answer;
 }
 
 function pieceOfWord() {

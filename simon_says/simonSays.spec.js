@@ -32,15 +32,15 @@ describe('Simon says', function() {
 	});
 
 	describe('pieceOfWord', function() {
-		it('returns the first letter', function() {
+		xit('returns the first letter', function() {
 			expect(simon.pieceOfWord("hello", 1)).toEqual("h");
 		});
 
-		it('returns the first two letters', function() {
+		xit('returns the first two letters', function() {
 			expect(simon.pieceOfWord("Bob", 2)).toEqual("Bo");
 		});
 
-		it('returns the first several letters', function() {
+		xit('returns the first several letters', function() {
 			var s = "abcdefg";
 			expect(simon.pieceOfWord(s, 1)).toEqual("a");
 			expect(simon.pieceOfWord(s, 2)).toEqual("ab");
@@ -49,29 +49,29 @@ describe('Simon says', function() {
 	});
 
 	describe('firstWord', function() {
-		it('tells us the first word of "Hello World" is "Hello"', function() {
+		xit('tells us the first word of "Hello World" is "Hello"', function() {
 			expect(simon.firstWord("Hello World")).toEqual("Hello");
 		});
 
-		it('tells us the first word of "oh dear" is "oh"', function() {
+		xit('tells us the first word of "oh dear" is "oh"', function() {
 			expect(simon.firstWord("oh dear")).toEqual("oh");
 		});
 	});
 
 	describe('titleCreator', function() {
-		it('capitalizes a word', function() {
+		xit('capitalizes a word', function() {
 			expect(simon.titleCreator("jaws")).toEqual("Jaws");
 		});
 
-		it('capitalizes every word (aka title case)', function() {
+		xit('capitalizes every word (aka title case)', function() {
 			expect(simon.titleCreator("david copperfield")).toEqual("David Copperfield");
 		});
 
-		it("doesn't capitalize 'little words' in a title", function() {
+		xit("doesn't capitalize 'little words' in a txitle", function() {
 			expect(simon.titleCreator("war and peace")).toEqual("War and Peace");
 		});
 
-		it('does capitalize "little words" at the start of a title', function() {
+		xit('does capitalize "little words" at the start of a title', function() {
 			expect(simon.titleCreator("the bridge over the river kwai")).toEqual("The Bridge over the River Kwai");
 		});
 	});
