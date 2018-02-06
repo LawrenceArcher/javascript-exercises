@@ -7,24 +7,34 @@ function shout(a) {
 }
 
 function repeat(a, b) {
-	let answer = "";
-	for  (let i = 0; i<b;i++){
-		if (i == b-1){
-			answer += a;
-		}else{
-			answer += a + " ";	
-		}
+	var answer = "";
+	if (arguments.length > 1){
+		for  (var i = 0; i<b;i++){
+			if (i == b-1){
+				answer += a;
+			}else{
+				answer += a + " ";	
+			}
 		
+		} 
+	}else if (arguments.length == 1){
+		answer = a + " " + a;
 	}
 	return answer;
 }
 
-function pieceOfWord() {
-	
+function pieceOfWord(a, b) {
+	var result = a.slice(0, b);
+	return result;
 }
 
-function firstWord() {
-	
+function firstWord(a) {
+	for (var i = 0; i < a.length; i++){
+		if (a[i] == " "){
+			var result = a.slice(0, i);
+			return result;
+		}
+	}
 }
 
 function capitalize(word) {
@@ -32,8 +42,10 @@ function capitalize(word) {
 	// This function just capitalizes the word given to it, use in conjunction with titleCreator
 }
 
-function titleCreator() {
-	
+function titleCreator(str) {
+	var lowerCaseWords = ["and", "the", "over", "from"];
+	capitalize(str);
+	return str;
 }
 
 module.exports = {
