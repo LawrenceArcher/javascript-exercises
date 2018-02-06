@@ -1,9 +1,9 @@
-var ftoc = function() {
-  
+var ftoc = function(fah) {
+  return (fah-32)/1.8
 }
 
-var ctof = function() {
-  
+var ctof = function(cel) {
+  return cel*1.8+32;
 }
 
 module.exports = {

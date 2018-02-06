@@ -1,4 +1,5 @@
-var {ftoc, ctof} = require('./tempConversion')
+var ftoc = require('./tempConversion')
+var ctof = require('./tempConversion')
 
 describe('ftoc', function() {
   it('works', function() {
@@ -13,7 +14,7 @@ describe('ftoc', function() {
 });
 
 describe('ctof', function() {
-  xit('works', function() {
+  it('works', function() {
     expect(ctof(0)).toEqual(32);
   });
   xit('rounds to 1 decimal', function() {
