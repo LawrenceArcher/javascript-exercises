@@ -42,10 +42,32 @@ function capitalize(word) {
 	// This function just capitalizes the word given to it, use in conjunction with titleCreator
 }
 
-function titleCreator(str) {
+function checkSmallWord(val){
 	var lowerCaseWords = ["and", "the", "over", "from"];
-	capitalize(str);
-	return str;
+	return lowerCaseWords.some(function(arrVal){
+		return val === arrVal;
+	});
+}
+
+
+function titleCreator(str) {
+	var arr = str.split(" ");
+	arr[0] = capitalize(arr[0]);
+	console.log(arr);
+	if (arr.length == 1){
+		var result = arr.join();
+		return result;
+	} else if (arr.length > 1){
+		for (var i=1;i<arr.length;i++){
+			if (!checkSmallWord(arr[i])){
+				arr[i] = capitalize(arr[i]);
+			}
+		}
+		var result = arr.join(" ");
+		return result;
+	}else{
+		console.log("error");
+	}
 }
 
 module.exports = {
