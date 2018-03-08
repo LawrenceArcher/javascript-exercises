@@ -1,13 +1,23 @@
 let input = "banana";
 function translate(input) {
 	let ay = "ay";
-	let output = "";
-	for (let i = 0; i<input.length;i++){
-		if (isVowel(input[i])){
-			output = input.substr(i).concat(input.slice(0,i)).concat(ay);
-			return output;
+	let outputArr = []
+	let outputLoop = "";
+	let arr = input.split(" ");
+	console.log(arr);
+	arr.forEach(function(element){
+		for (let i = 0; i<element.length;i++){
+			if (element[i] == "u" && element[i-1]=="q"){
+				continue;
+			}else if (isVowel(element[i])){
+				outputLoop = element.substr(i).concat(element.slice(0,i)).concat(ay);
+				outputArr.push(outputLoop);
+				return;
+			}
 		}
-	}
+	})
+	return outputArr.join(" ");
+	
 	
 }
 function isVowel(char) {
